@@ -1,46 +1,50 @@
 package userprofile.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document(indexName = "selections", type = "amenity")
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Amenity {
 
     @Id
-    private String id;
-    private int timestamp;
-    private int userId;
-    private int amenityId;
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long id;
+    private Long timestamp;
+    private String userId;
+    private Long amenityId;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public int getTimestamp() {
+    public Long getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(int timestamp) {
+    public void setTimestamp(Long timestamp) {
         this.timestamp = timestamp;
     }
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
-    public int getAmenityId() {
+    public Long getAmenityId() {
         return amenityId;
     }
 
-    public void setAmenityId(int amenityId) {
+    public void setAmenityId(Long amenityId) {
         this.amenityId = amenityId;
     }
 }

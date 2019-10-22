@@ -1,13 +1,13 @@
 package userprofile.repository;
 
-import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import userprofile.model.Amenity;
 
 import java.util.List;
 
 @Repository
-public interface AmenityRepository extends ElasticsearchRepository<Amenity, String> {
+public interface AmenityRepository extends CrudRepository<Amenity, String> {
 
-    List<Amenity> findByUserIdOrderBy(int userId);
+    List<Amenity> findByUserId(String userId);
 }
