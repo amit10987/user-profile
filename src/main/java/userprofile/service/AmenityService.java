@@ -1,8 +1,10 @@
 package userprofile.service;
 
-import java.util.Set;
+import userprofile.model.Amenity;
+
+import java.util.List;
 
 public interface AmenityService {
 
-    Set<Long> getTopAmenityByUserId(String userId, int size);
+    List<Amenity> getTopAmenityByUserId(String userId, int size);
 }

@@ -1,59 +1,23 @@
 package userprofile.model;
 
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
 public class Hotel {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private int timestamp;
-    private int userId;
-    private int hotelId;
-    private String hotelRegion;
+    private Long hotelId;
+    private Long clickCount;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public int getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(int timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
-    public int getHotelId() {
+    public Long getHotelId() {
         return hotelId;
     }
 
-    public void setHotelId(int hotelId) {
+    public void setHotelId(Long hotelId) {
         this.hotelId = hotelId;
     }
 
-    public String getHotelRegion() {
-        return hotelRegion;
+    public Long getClickCount() {
+        return clickCount;
     }
 
-    public void setHotelRegion(String hotelRegion) {
-        this.hotelRegion = hotelRegion;
+    public void setClickCount(Long clickCount) {
+        this.clickCount = clickCount;
     }
 }

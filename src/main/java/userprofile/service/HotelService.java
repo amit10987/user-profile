@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface HotelService {
 
-    List<Hotel> getTopHotelsByUserId(int userId);
+    List<Hotel> getTopHotelsByUserId(String userId, int size);
 }
